@@ -1,0 +1,131 @@
+<!-- <!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Tanpa CSS</title>
+    </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Program Pembalik String</h2>
+    <input type="text" id="inputString" placeholder="Masukkan teks di sini">
+    <br>
+    <button onclick="balikkanString()">Balikkan</button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function balikkanString() {
+      let teks = document.getElementById("inputString").value;
+      let hasil = teks.split("").reverse().join("");
+      document.getElementById("output").innerText = "Hasil: " + hasil;
+    }
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembalik String</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #838474;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    #output {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #0077cc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Program Pembalik String</h2>
+    <input type="text" id="inputString" placeholder="Masukkan teks di sini">
+    <br>
+    <button onclick="balikkanString()">Balikkan</button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function balikkanString() {
+      let teks = document.getElementById("inputString").value;
+      let hasil = teks.split("").reverse().join("");
+      document.getElementById("output").innerText = "Hasil: " + hasil;
+    }
+  </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script src="sribe.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Linear Search Judul Buku</title>
+</head>
+<body>
+  <h2>Pencarian Judul Buku (Linear Search)</h2>
+
+  <label for="judul">Masukkan judul buku: </label>
+  <input type="text" id="judul" placeholder="contoh: Pemrograman Web">
+  <button onclick="cariBuku()">Cari</button>
+
+  <p id="hasil"></p>
+
+  <script>
+    // Array judul buku (tidak terurut)
+    let buku = ["Algoritma", "Pemrograman Web", "Basis Data", "Jaringan Komputer", "Struktur Data"];
+
+    function cariBuku() {
+      let key = document.getElementById("judul").value;  // input user
+      let ditemukan = false;
+
+      // Linear Search
+      for (let i = 0; i < buku.length; i++) {
+        if (buku[i].toLowerCase() === key.toLowerCase()) {
+          document.getElementById("hasil").innerText = 
+            "Buku '" + key + "' ditemukan di indeks ke-" + i;
+          ditemukan = true;
+          break;
+        }
+      }
+
+      if (!ditemukan) {
+        document.getElementById("hasil").innerText = 
+          "Buku '" + key + "' tidak ditemukan dalam daftar.";
+      }
+    }
+  </script>
+</body>
+</html>
